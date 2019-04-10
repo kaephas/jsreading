@@ -10,6 +10,7 @@
 function heeHaw() {
     for (let i = 1; i <= 100; i++) {
         let output = "";
+
         if (i % 3 == 0) {
             output += "Hee";
             if (!(i % 5 == 0)) {
@@ -23,6 +24,7 @@ function heeHaw() {
             }
             output += "Haw!";
         }
-        console.log(output);
+
+        console.log(i + ": " + output);
     }
 }
