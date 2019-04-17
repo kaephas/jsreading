@@ -6,13 +6,14 @@
  * chapter3.js
  */
 
-
+// script loaded at top, so wait for window to load to add onclick
 window.onload = function() {
+    // button id = heeHaw
     myButton = document.getElementById('heeHaw');
     myButton.onclick = function() {
+        // input field id = num
         myNum = document.getElementById('num').value;
         heeHaw(myNum);
-        console.log(myNum)
     }
 };
 
