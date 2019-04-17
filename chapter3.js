@@ -6,6 +6,16 @@
  * chapter3.js
  */
 
+
+window.onload = function() {
+    myButton = document.getElementById('heeHaw');
+    myButton.onclick = function() {
+        myNum = document.getElementById('num').value;
+        heeHaw(myNum);
+        console.log(myNum)
+    }
+};
+
 // hee haw 3 & 5 up to num
 function heeHaw(number) {
     for (let i = 1; i <= number; i++) {
