@@ -17,47 +17,46 @@ let doneButton = document.getElementById('done');
 let outputDiv = document.getElementById('printResult');
 
 // initialize array
-let myArray = [];
+let dataArray = [];
 
 
 // add-item button click
 arrayButton.onclick = function() {
-    addToArray(myArray);
+    addToArray();
 };
 
 // done-adding button click
 doneButton.onclick = function() {
 
-    let newObject = createObject(myArray);
+    // create a new object from the values in the array
+    let newObject = createObject(dataArray);
+    // display the object on the web page in a standard object layout
     displayObject(newObject);
 
     // clear array for new input
-    myArray = [];
+    dataArray = [];
 
 };
 
-function addToArray(dataArray) {
-    if(dataField.value !== "") {
-        // add input value to array
-        dataArray.push(dataField.value);
-        // empty input
-        dataField.value = "";
-        dataField.focus();
-        // testing purposes
-        console.log('data array: ' + dataArray);
-        console.log('myArray: ' + myArray);
-    }
-}
+// Main Function
 
+// add each value in the array to the appropriate field
 function createObject(objectArray) {
+    // reset object display
+    outputDiv.innerHTML = "";
+    // add spaces after commas for readability
+    let arrayString = objectArray.toString().replace(/,/g, ", ");
+    // display the array to be converted
+    outputDiv.innerHTML += '<p>Array: [ ' + arrayString + ' ]</p>';
     if(objectArray.length > 0) {
-        // get type
-        // intialize object
+
+        // initialize object with empty arrays for each field
         let typeObject = {
             strings: [],
             numbers: [],
             booleans: []
         };
+
         // for each item in the array
         for(let item of objectArray) {
             // match to the right field
@@ -71,10 +70,10 @@ function createObject(objectArray) {
             } else if(typeof(item) === 'string') {
                 typeObject.strings.push(item);
             } else {
-                // not sure how this would happen but just in case!
+                // not sure how this would happen, but just in case
                 console.log("undefined or null value encountered");
             }
-            // for error checking
+            // for debugging
             console.log("added item to object: " + item + " => " + JSON.stringify(typeObject));
         }
         return typeObject;
@@ -84,19 +83,37 @@ function createObject(objectArray) {
     }
 }
 
-function displayObject(myObject) {
-    // reset object display
-    outputDiv.innerHTML = "";
-    outputDiv.innerHTML += '<span>var result = {</span><br>';
+// add value from text input to array
+function addToArray() {
+    if(dataField.value !== "") {
+        // add input value to array
+        dataArray.push(dataField.value);
+        // empty input
+        dataField.value = "";
+        dataField.focus();
 
-    // outputDiv.innerHTML += '<span>&#8195;strings: ' + myObject.strings;
-    // outputDiv.innerHTML += '<span>&#8195;numbers: ' + myObject.numbers;
-    // outputDiv.innerHTML += '<span>&#8195;booleans: ' + myObject.booleans;
-
-    for(let type in myObject) {
-        outputDiv.innerHTML += '<span>&#8195;' + type + ': ' + myObject[type] + '</span><br>';;
+        // debugging: show full array after each input
+        console.log('Array: ' + dataArray);
     }
+}
 
+// display the object
+function displayObject(myObject) {
+    // first line of output
+    outputDiv.innerHTML += '<div>let typeObject = {<br>';
+    let output = "";
+    for(let type in myObject) {
+        // add a space after each comma of default toString
+        let value = JSON.stringify(myObject[type]).replace(/,/g, ", ");
+        // space after and before brackets for readability
+        value = value.replace('[', '[ ');
+        value = value.replace(']', ' ]');
+        // tab before to match standard spacing
+        output += '&#8195;' + type + ': ' + value + ',<br>';
+    }
+    // remove comma after last field
+    let pos = output.lastIndexOf(',');
+    output = output.substring(0, pos) + output.substring(pos+1);
     // last line of output
-    outputDiv.innerHTML += '<span>};</span>';
+    outputDiv.innerHTML += output + '};</div>';
 }
