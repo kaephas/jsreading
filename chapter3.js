@@ -3,7 +3,7 @@
  *
  * Kaephas Kain
  * 4-17-19
- * chapter3.js
+ * heeHaw.js
  */
 
 // script loaded at top, so wait for window to load to add onclick
