@@ -1,0 +1,43 @@
+[
+  {
+    "name": "Kaephas Kain",
+    "sex": "m",
+    "born": 1982,
+    "died": "n/a",
+    "father": "Randy Kain",
+    "mother": "Jennifer Beadle"
+  },
+  {
+    "name": "Latara Kain",
+    "sex": "f",
+    "born": 1987,
+    "died": "n/a",
+    "father": "Wayne Goding",
+    "mother": "Cari Goulette"
+  },
+  {
+    "name": "Jane Doe",
+    "sex": "f",
+    "born": 1941,
+    "died": 1999,
+    "father": "Isaac Newton",
+    "mother": "Marie Curie"
+  },
+
+  {
+    "name": "Jane Ramirez",
+    "sex": "f",
+    "born": 1821,
+    "died": 1920,
+    "father": "Diego Ramirez",
+    "mother": "Frida Kahlo"
+  },
+  {
+    "name": "James Joyce",
+    "sex": "m",
+    "born": 1882,
+    "died": 1941,
+    "father": "John Joyce",
+    "mother": "Mary Murray"
+  }
+]
