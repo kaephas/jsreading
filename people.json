@@ -1,19 +1,19 @@
 [
   {
-    "name": "Kaephas Kain",
+    "name": "John Harrison",
     "sex": "m",
-    "born": 1982,
-    "died": "n/a",
-    "father": "Randy Kain",
-    "mother": "Jennifer Beadle"
+    "born": 1804,
+    "died": 1878,
+    "father": "William Henry Harrison",
+    "mother": "Anne Symmes"
   },
   {
-    "name": "Latara Kain",
+    "name": "Caroline Kennedy",
     "sex": "f",
-    "born": 1987,
+    "born": 1957,
     "died": "n/a",
-    "father": "Wayne Goding",
-    "mother": "Cari Goulette"
+    "father": "John Fitzgerald Kennedy",
+    "mother": "Jacqueline Kennedy"
   },
   {
     "name": "Jane Doe",
@@ -23,7 +23,6 @@
     "father": "Isaac Newton",
     "mother": "Marie Curie"
   },
-
   {
     "name": "Jane Ramirez",
     "sex": "f",
@@ -39,5 +38,29 @@
     "died": 1941,
     "father": "John Joyce",
     "mother": "Mary Murray"
+  },
+  {
+    "name": "Bram Stoker",
+    "sex": "m",
+    "born": 1847,
+    "died": 1912,
+    "father": "Abraham Stoker",
+    "mother": "Charlotte Mathilda Blake Thornley"
+  },
+  {
+    "name": "Paul David Hewson",
+    "sex": "m",
+    "born": 1960,
+    "died": "n/a",
+    "father": "Brendan Robert Hewson",
+    "mother": "Iris Rankin"
+  },
+  {
+    "name": "Jocelyn Bell Burnell",
+    "sex": "f",
+    "born": 1943,
+    "died": "n/a",
+    "father": "G. Philip Bell",
+    "mother": "M. Allison"
   }
 ]
